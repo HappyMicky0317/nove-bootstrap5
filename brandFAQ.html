@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>MIDWAYPLUS</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap 4 Mobile App Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700|Nunito:400,600,700" rel="stylesheet">
+    
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+	<!-- modified CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/new.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".accordion-button").click(function(){
+				$(this).children("svg").toggleClass("svg-drop");
+			});
+			$(".faq-category").click(function(){
+				$(".faq-category").removeClass("faq-active");
+				$(this).addClass("faq-active");				
+				location.href = location.href.split("#")[0] + $(this).children("a").attr("href");
+				if(screen.width < 767){
+					$("#faq-category-container").toggleClass("category-toggle");
+				}
+				
+			});
+		})
+		// function categoryToggle(){
+		// 	$("#faq-category-container").toggleClass("category-toggle");
+		// }
+		
+	</script>
+</head> 
+
+<body>
+    
+    <header class="header">
+	    
+        <div class="branding">
+            
+            <div class="container position-relative">
+
+				<nav class="navbar navbar-expand-lg" >
+                    <h1 class="site-logo"><a class="navbar-brand" href="/"><img class="logo-icon-new" src="assets/images/new-logo-icon.svg" alt="logo" width="200px"> </a></h1>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<div class="collapse navbar-collapse p-1 p-lg-0" id="navigation">
+						<ul class="navbar-nav ms-lg-auto">
+							<li class="nav-item me-lg-4">
+							    <a class="nav-link nav-font" href="index.html">Log In</a>
+							</li>
+							<li class="nav-item me-lg-4">
+							    <a class="nav-link nav-font" href="features.html">Features</a>
+							</li>
+							<li class="nav-item me-lg-4">
+							    <div class="dropdown">
+									<a class="btn btn-secondary dropdown-toggle nav-font" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+									  FAQ's
+									</a>
+								  
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									  <li><a class="dropdown-item nav-font" href="brandFAQ.html">Brand FAQ's</a></li>
+									  <li><a class="dropdown-item nav-font" href="resellerFAQ.html">Reseller FAQ's</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="nav-item me-lg-4">
+							    <a class="nav-link nav-font" href="about.html">About Us</a>
+							</li>
+							<li class="nav-item me-lg-4">
+							    <a class="nav-link nav-font" href="contact.html">Contact</a>
+							</li>
+
+							<li class="nav-item me-0">
+							    <a class="nav-link nav-font" href="signup.html">Request A Demo</a>
+							</li>
+							<li class="nav-item me-lg-4">
+								<div class="dropdown">
+									<a class="btn btn-secondary dropdown-toggle nav-font" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+									  Sign Up
+									</a>
+								  
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									  <li><a class="dropdown-item nav-font" href="#">Brand Sign Up</a></li>
+									  <li><a class="dropdown-item nav-font" href="#">Reseller Sign Up</a></li>
+									</ul>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+				</nav>
+				
+				<!-- // Free Version ONLY -->
+				<ul class="social-list list-inline mb-0 position-absolute d-none">
+		            <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+	                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+	                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
+	                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fab fa-youtube fa-fw"></i></a></li>
+	            </ul><!--//social-list-->	            
+            </div><!--//container-->            
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    <div class="faq-container">
+		<div>
+			<h1 class="headline-font faq-title">BRAND FAQS</h1>
+			<div class="row">
+				<div class="col-12 col-lg-2 col-md-3" style="padding-bottom: 30px;">
+					<!-- <button onclick=categoryToggle() class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#faq-category-container" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon faq-category-icon"></span>
+					</button> -->
+					<div id="faq-category-container" class="category-container category-toggle">
+						<div class="faq-category faq-active">
+							<a href="#category1">Standard / Basic</a>
+						</div>
+						<div class="faq-category">
+							<a href="#category2">Privacy / Security</a>
+						</div>
+						<div class="faq-category">
+							<a href="#category3">Control</a>
+						</div>
+						<div class="faq-category">
+							<a href="#category4">Marketing</a>
+						</div>
+						<div class="faq-category">
+							<a href="#category5">Tax Compliance</a>
+						</div>
+						<div class="faq-category">
+							<a href="#category6">Payments</a>
+						</div>
+						<div class="faq-category">
+							<a href="#category7">Shipping</a>
+						</div>
+						<div class="faq-category">
+							<a href="#category8">Orders</a>
+						</div>
+						<div class="faq-category">
+							<a href="#category9">Products</a>
+						</div>
+						<div class="faq-category">
+							<a href="#category10">Price Engine</a>
+						</div>
+						<div class="faq-category">
+							<a href="#category11">Programs/Special Offers to Resellers</a>
+						</div>
+						<div class="faq-category">
+							<a href="#category12">Inventory Link</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-10 col-md-9 faqs-cointainer">
+					<h5 id="category1" class="faq-category-title">Standard/Basic</h5>
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1" >
+								What is Midway Plus?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq1" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								MidwayPlus is a B2B software solution that connects manufacturers with the best resale partners for their business. Our solution improves the way automotive brands engage with their customers and the wholesale market. 
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2" >
+								So you’re an Online Distributor?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq2" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								No! Our game changing B2B software platform allows you to sell directly to your Dealers. You set your pricing, create your sales and promotions, and control who you sell to. Our software allows you to handle thousands of Reseller relationships, but we never buy your product, mark it up, or pressure you for discounts.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3" >
+								How long does it take to get onboarded?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq3" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								You could be launched in as little as two weeks! MidwayPlus gives Brands flexibility to manage their products, pricing, and programs. For this reason, it usually takes from 2 to 6 weeks to be fully onboarded. 
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4" >
+								Can a Brand also be a reseller?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq4" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								The only company that can sell a particular Brand is the Brand itself but we recognize that there are some companies that are both a Brand and a Reseller. We welcome these companies. At the present time, this scenario will require two different accounts within MidwayPlus.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5" >
+								How does a brand onboard its resellers?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq5" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								A Brand can easily invite its resellers to join through our simple-to-use Customer-Invite feature on our site. 
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6" >
+								Do the resellers purchase directly from our company?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq6" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes! MidwayPlus facilitates the searching, shopping, and order management of Resellers so that they can easily buy your products directly from you.
+							</div>
+						</div>
+					</div><!--//accordion-item-->					
+
+					<h5 id="category2" class="faq-category-title" style="margin-top: 40px;">Privacy / Security </h5>
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7" >
+								Can we see other brands’ information? / Can another brand see our brand’s information?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq7" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								No. MidwayPlus will never share individual Brand data with any other party. This includes your product data, pricing, programs, sales, and incentives. Brands’ product data will be available to Resellers as part of their shopping experience, but each Brand controls which Resellers can see their pricing and programs. 
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8" >
+								Can a Reseller see another Resellers information?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq8" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								No. MidwayPlus will never share Reseller information with other Resellers. Brands will be able to see the profile a Reseller creates for the site and certain attributes of a Reseller, such as type of business, specialty, etc. This benefits the Reseller by allowing Brands to target Resellers with special programs.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9" >
+								Does MidwayPlus share sales, reseller, service levels data with anyone?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq9" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								MidwayPlus will only share data regarding your sales, purchases, and service levels with your company. 
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<h5 id="category3" class="faq-category-title" style="margin-top: 40px;">Control</h5>
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10" >
+								As a brand can we block a reseller from purchasing our product?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq10" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes. Brands have full control over who can buy their product and see their pricing. MidwayPlus provides the tool to make this process easy to manage.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq11" aria-expanded="false" aria-controls="faq11" >
+								As a brand can we restrict the shipment of our product to territories or states?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq11" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes. Brands can add state-by-state and country-by-country restrictions of where their products can ship to. This can be done on the individual SKU level, so a Brand may opt to restrict only parts of their catalog to certain states.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<h5 id="category4" class="faq-category-title" style="margin-top: 40px;">Marketing</h5>
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq12" aria-expanded="false" aria-controls="faq12" >
+								How do we engage our resellers or prospects?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq12" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								MidwayPlus offers several tools to help engage your Resellers and/or prospects. These include tiered pricing, rebates, coupons, discount programs, and freight programs. You will also be able to promote your products and Brand on our internal newsfeed for Resellers.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq13" aria-expanded="false" aria-controls="faq13" >
+								What is a Brand Storefront?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq13" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Think of a Brand Storefront as your public profile for the Resellers to see. Resellers can navigate to your Storefront and see relevant information about your Brand and a list of your products that they can purchase directly from your Storefront.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq14" aria-expanded="false" aria-controls="faq14" >
+								How do we use the MidwayPlus Newsfeed?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq14" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								The MidwayPlus Newsfeed is a wonderful place to promote your Brand. You can alert Resellers to upcoming promotions, new parts (even pre-sell new parts!), and attendance at industry events. 
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<h5 id="category5" class="faq-category-title" style="margin-top: 40px;">Tax Compliance</h5>
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq15" aria-expanded="false" aria-controls="faq15" >
+								How do we manage all the resellers tax documents?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq15" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								In short: you no longer need to. MidwayPlus manages all sales tax documents, collection, remittance, and filing. The sales tax liability and filing requirements – for over 11,000 taxing jurisdictions in the U.S. - rest with MidwayPlus.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq16" aria-expanded="false" aria-controls="faq16" >
+								A Reseller contacted me and said they should not be charged sales tax when buying our products through MidwayPlus. How should I respond?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq16" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								MidwayPlus works with Sales Tax software companies and consultants to make sure we are always in compliance with the laws regarding sales tax in over 11,000 taxing jurisdictions. Please ask the Reseller to contact MidwayPlus so we can make sure we have all their tax exemption certificates on file.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<h5 id="category6" class="faq-category-title" style="margin-top: 40px;">Payments</h5>
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq17" aria-expanded="false" aria-controls="faq17" >
+								How do we get paid?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq17" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Your company will, with our help, establish a direct relationship with our payment processor. Typically, you will be paid in 2 to 4 days from the date of an order.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq18" aria-expanded="false" aria-controls="faq18" >
+								Do we get a payment from MidwayPlus or our reseller?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq18" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								You will be getting paid directly from the Reseller, via our Payment Processor. The remittance advice you receive from the Payment Processor will have the Reseller’s name and not MidwayPlus’.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<h5 id="category7" class="faq-category-title" style="margin-top: 40px;">Shipping</h5>
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq19" aria-expanded="false" aria-controls="faq19" >
+								How is shipping calculated? 
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq19" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Using your own carrier accounts and product data, we will calculate the shipping charges. We can include any rules you may have for the shipping calculations, such as discounts, upcharges, or free freight thresholds. We will include the shipping charges in the total amount charges the Reseller and the Payment Processor will pass those charges to you when sending the payment for the order.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq20" aria-expanded="false" aria-controls="faq20" >
+								Can we ship from a 3pl?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq20" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes! If you authorize us and tell where a product ships from you can ship from anywhere. Ask us about our integrations with 3PLs.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<h5 id="category8" class="faq-category-title" style="margin-top: 40px;">Orders</h5>
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq21" aria-expanded="false" aria-controls="faq21" >
+								Can we restrict orders to allow only in-stock items only for purchase?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq21" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes. You will have the option to allow backorders or to only place orders for products in stock.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq22" aria-expanded="false" aria-controls="faq22" >
+								How fast do we need to ship products?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq22" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Resellers and consumers have come to expect receiving their products quickly. MidwayPlus does not enforce a shipping turn-around time, but we recommend working to get your products out the door both quickly and consistently. You will be able to add a shipping lead-time to your settings to help MidwayPlus set expectations with the Reseller regarding how quickly your ship products.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq23" aria-expanded="false" aria-controls="faq23" >
+								Can we cancel an order?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq23" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes. There may be times that it is necessary to cancel an order. MidwayPlus has workflows built in to guide the messaging and refund to the Reseller.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq24" aria-expanded="false" aria-controls="faq24" >
+								Can a reseller cancel an order?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq24" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Resellers’ ability to cancel an order are subject to your company’s settings within the MidwayPlus platform.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<h5 id="category9" class="faq-category-title" style="margin-top: 40px;">Products</h5>
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq25" aria-expanded="false" aria-controls="faq25" >
+								Can we attach videos on product detail when shopping?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq25" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes. You may attach up to 2 videos per product. The links to these videos are presented to the Reseller as they are viewing your products, either within your storefront or within a more general, multi-Brand search results screen.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq26" aria-expanded="false" aria-controls="faq26" >
+								Can we include documents on the product detail when shopping?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq26" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes. You may attach up to 4 documents per product. The links to these documents are presented to the Reseller as they are viewing your products, either within your storefront or within a more general, multi-Brand search results screen.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq27" aria-expanded="false" aria-controls="faq27" >
+								How do we manage discontinued/superseded products?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq27" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Within the MidwayPlus Product Manager, you will be able to flag parts as discontinued, superseded, or both. If superseded, the MidwayPlus search engine will point Resellers to your new part.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<h5 id="category10" class="faq-category-title" style="margin-top: 40px;">Price Engine</h5>
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq28" aria-expanded="false" aria-controls="faq28" >
+								Can we have multiple price tiers?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq28" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes. You can have as many as six standard pricing tiers. These tiers are the base price from which all other discounts are calculated.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq29" aria-expanded="false" aria-controls="faq29" >
+								Can we offer bulk pricing on a SKU?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq29" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes, in addition to the six standard price tiers, you can have up to 2 quantity breaks.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq30" aria-expanded="false" aria-controls="faq30" >
+								Can we edit the price of a product quickly?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq30" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								You can very quickly edit the price of one part through your MidwayPlus Product Manager. For updates to many parts, you can easily download a current price list, modify prices in Excel, and re-upload to MidwayPlus.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq31" aria-expanded="false" aria-controls="faq31" >
+								How do we handle a scheduled price increase?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq31" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								All price increases have an effective date. You can make the effective date today out to any point in the future.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq23" aria-expanded="false" aria-controls="faq32" >
+								Who sets the pricing for the Resellers?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq32" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								You set the pricing for Resellers! MidwayPlus is a tool for you to manage more relationships and transactions with Resellers. We will never dictate a price, discount, rebate, co-op, or any other program.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq33" aria-expanded="false" aria-controls="faq33" >
+								Can all resellers see our storefront and products?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq33" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								All Resellers will be able to see your products, but you control who can see your pricing and inventory.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq34" aria-expanded="false" aria-controls="faq34" >
+								Can we choose who we want to sell?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq34" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes! You have full control over which Resellers can buy your products or even see your pricing.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq35" aria-expanded="false" aria-controls="faq35" >
+								Can we see all Resellers on the platform?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq35" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								You will always be able to see the Resellers you have done transactions with and have explicitly authorized to buy your product. However, making MidwayPlus a productive platform for Resellers prevents us from showing a list of all Resellers to any Brand. You can promote visibility of your Brand by using the MidwayPlus Newsfeed and targeting prospects with Sales and other Programs.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<h5 id="category11" class="faq-category-title" style="margin-top: 40px;">Programs/Special Offers to Resellers</h5>
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq36" aria-expanded="false" aria-controls="faq36" >
+								What kind of sales are possible?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq36" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Among the types of sales and promotions you can create are: limited time discount, one-time use coupon code, rebates, free items, freight promotions, and quantity breaks.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq37" aria-expanded="false" aria-controls="faq37" >
+								Can we offer shipping deals?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq37" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes! We allow you to create several shipping deals to both optimize your shipping and to incentivize the Resellers.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq38" aria-expanded="false" aria-controls="faq38" >
+								Can we offer a reseller a rebate?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq38" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes! Not only can you offer a Reseller a rebate, if a rebate is earned it is only available to use on your products!
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq39" aria-expanded="false" aria-controls="faq39" >
+								Can we schedule a sale and limit by time?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq39" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								Yes! You can schedule both the start and end of a sale.
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<h5 id="category12" class="faq-category-title" style="margin-top: 40px;">Inventory Link</h5>
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq40" aria-expanded="false" aria-controls="faq40" >
+								Is the update via a API or manual?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq40" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								We would prefer to use an API to update available inventory on your MidwayPlus storefront. We can also accommodate inventory files being uploaded to our system or made available to us for download from your systems.
+								If needed, you can also update inventory levels manually in your MidwayPlus Product Manager.
+
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+					<div class="accordion-item rounded mb-4 shadow-lg">
+						<h2 class="accordion-header border-0 p-4 rounded" id="faq-heading-1" style="padding:1rem 0.7rem !important;">
+							<button class="accordion-button btn btn-link bg-white border-0" type="button" data-bs-toggle="collapse"  data-bs-target="#faq41" aria-expanded="false" aria-controls="faq41" >
+								Can we integrate our ERP or QuickBooks?
+								<svg version="1.1" id="Layer_1" class="svg-drop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 330 330" width="30" height="30"  xml:space="preserve" style="float:right">
+								<path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+									l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+									C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+								</svg>
+							</button>
+						</h2>
+						<div id="faq41" class="accordion-collapse collapse border-0" aria-labelledby="faq-heading-1">
+							<div class="accordion-body p-4 pt-0" >
+								We have several integrations to popular ERP and Accounting packages, such as QuickBooks and NetSuite. Check with us to learn what is available. If we do not yet have an integration to your preferred system, we’d be happy to discuss creating one for you.
+
+							</div>
+						</div>
+					</div><!--//accordion-item-->
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <footer class="footer theme-bg-primary" style="background-color: white!important;padding-bottom:50px;padding-top:50px">
+	    <div class="container py-5 mb-3" style="margin-bottom: 0!important;">
+		    <div class="row">
+			    <div class="footer-col col-6 col-lg-4 footer-logo">
+					<img src="assets/images/new-logo-icon.svg" width="200px" />
+			    </div><!--//footer-col-->
+			    <div class="footer-col col-6 col-lg-4">
+				    <ul class="list-unstyled">
+					    <li><a class="text-link social-link nav-font" href="#">Features</a></li>
+					    <li><a class="text-link social-link nav-font" href="#">FAQ's</a></li>
+					    <li><a class="text-link social-link nav-font" href="#">Contact</a></li>
+						<li><a class="text-link social-link nav-font" href="#">Team</a></li>
+				    </ul>
+			    </div><!--//footer-col-->
+			    <div class="footer-col col-6 col-lg-4">
+				    <h4 class="col-heading social-link nav-font">Stay Connected</h4>
+				    <ul class="social-list list-unstyled mb-0">
+					    <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-linkedin fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-twitter fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-youtube fa-fw"></i></a></li>
+		            </ul><!--//social-list-->
+		            
+		            <div class="mb-2 social-link nav-font">
+			            28175 Haggerty Rd, Novi, MI 48377
+		            </div>
+		            <div class="email-link">
+			            <a class="text-link social-link nav-font" href = "mailto: info@midwayplus.com" target="_blank">info@midwayplus.com</a>
+			        </div>
+		            
+			    </div><!--//footer-col-->
+		    </div><!--//row-->
+	    </div><!--//container-->
+	    <!-- <div class="container">
+		    <hr>
+	    </div>
+	    <div class="download-area py-4">
+		    <div class="container text-center">
+			    <h3 class="mb-3">Get the app</h3>
+		    <div class="section-intro mb-4 single-col-max-width mx-auto">Download our apps now. lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis. </div>
+			    <ul class="app-stores list-unstyled list-inline mx-auto  d-inline-block">
+				    <li class="list-inline-item me-3"><a href="#"><img class="ios" src="assets/images/appstore-apple.svg" alt="app-store"></a></li>
+				    <li class="list-inline-item"><a href="#"><img class="android" src="assets/images/appstore-android.svg" alt="google play"></a></li>
+			    </ul>
+		    </div>
+	    </div>
+	    <div class="footer-bottom text-center pb-5">
+	        <small class="copyright">Template Copyright &copy; <a class="text-link" href="https://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a></small>
+	    </div> -->
+		
+    </footer>
+
+    
+       
+    <!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/popper.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+
+    <!-- Page Specific JS -->
+    <script type="text/javascript" src="assets/js/accordion.js"></script>
+    
+</body>
+</html> 
+

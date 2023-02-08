@@ -1,0 +1,270 @@
+/* navbar */
+.navbar-collapse > ul > li > .nav-link,
+.navbar-collapse > ul > li > div > .btn-secondary,
+.navbar-collapse > ul > li > div > ul > li > a 
+{
+    color: #555555;
+}
+.navbar-collapse > .navbar-nav > .nav-item > .dropdown > .btn ,
+.navbar-collapse > .navbar-nav > .nav-item > .dropdown > .dropdown-menu > li > .dropdown-item{
+    background-color: transparent;
+    border: none;
+    font-family: Arial;
+    color: #526b84;
+    font-weight: 500;
+}
+.navbar-collapse > .navbar-nav > .nav-item > .nav-link:hover , 
+.navbar-collapse > .navbar-nav > .nav-item > .dropdown > .btn:hover,
+.navbar-collapse > .navbar-nav > .nav-item > .dropdown > ul > li > .dropdown-item:hover
+{
+    color: #11548F;
+}
+.navbar-collapse > .navbar-nav > .nav-item > .dropdown > .btn
+/* end navbar */
+
+.logo-icon-new {
+    width:221px
+}
+
+.nav-font{
+    font-family: Arial;
+}
+.graphic-bg {
+    background-image: url("./images/new-graphic-background-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headline-font {
+    font-family: Arial Bold;
+}
+.site-tagline {
+    font-family: Sans Regular;
+}
+.main-content{
+    font-size:1.1rem ;
+}
+.headline-image {
+    background: url(./images/new-MDWYPLUS_ComputerGuy2.png) no-repeat right top;
+    background-size: 640px auto;
+    min-height: 600px;
+}
+.btn {
+    font-family: Sans Bold;
+}
+.mid-icon-contents{
+    margin-top: 20px;
+}
+.icon-image{
+    margin-right: 20px;
+}
+.carousel-cell .testimonial-carousel{
+    background-color: #f2f2f2;
+}
+.carousel-cell > .item-inner {
+    height: 95%; 
+    display: flex;
+    align-items: center;
+}
+.testimonial-carousel{
+    height: 520px;
+}
+.footer-col{
+    text-align: center;
+}
+.social-link{
+    color: #555555!important;
+}
+.footer-logo{
+    justify-content: center;
+    display: flex;
+}
+/* carousel */
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+.btn-primary-carousel{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+.btn-primary-carousel:focus{
+    background-color: transparent;
+}
+.btn-primary-carousel:hover{
+    background-color: transparent;
+}
+
+/* team part */
+.team-title{
+    color: hwb(202deg 0% 35%);
+    font-weight: bold;
+    font-size: 50px;
+    padding-left: 70px;
+    padding-top: 50px;
+}
+.team-container{
+    padding: 60px 200px;
+
+}
+.team-container > .justify-content-center > div > .headline-font {
+    padding-top: 0px!important;
+}
+.team-container > .justify-content-center > div > .site-tagline{
+    font-size: 1.2rem!important;
+    margin-top: 20px;
+}
+.avatar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.member-avatar{
+    width: 350px;
+    padding: 20px 0;
+}
+.team-container > .justify-content-center > .mobile-container {
+    display: none;
+}
+.team-container > .justify-content-center > .desktop-container {
+    display: block;
+}
+/* end team part */
+
+.contact-form > .row > .col-12 > .btn {
+    background-color: #6ECCFF;
+    border-color:#6ECCFF;
+    color: white;
+    font-family: Sans Bold;
+}
+.contact-form > .row > .col-12 > .btn:hover{
+    background-color: #11548F;
+}
+.footer-col > div > .social-link:hover{
+    color: #11548f !important;;
+}
+/* faq part */
+.faq-container{
+    background-color: #F2F2F2;
+}
+.faq-container > div{
+    padding: 0px 150px;
+}
+.faq-title{
+    color: #001746;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.category-container{
+    background-color: #11548F;
+}
+.faq-category{
+    padding: 15px 20px;
+    cursor: pointer;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
+}
+.faq-category > a {
+    color:white;
+    font-family: Arial;
+    font-weight: bold;
+    text-decoration: none;
+}
+.faq-active{
+    background-color: #001746;
+}
+.faqs-cointainer{
+    padding-left: 20px;
+}
+.faq-category-title{
+    font-family: Arial Bold;
+    color: #555555
+}
+
+.svg-drop{
+    transform: rotate(180deg);
+}
+.faqs-cointainer > .accordion-item{
+    background-color: white;
+}
+.faqs-cointainer > .accordion-item > .accordion-header > .accordion-button {
+    font-family: Sans Bold;
+    color: #11548F;
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: block;
+}
+.faqs-cointainer > .accordion-item > .accordion-collapse > .accordion-body {
+    color: #B0B7C3 ;
+    font-family:Sans Regular ;
+}
+.faq-category-icon {
+    background: url(./images/bars.svg) no-repeat;
+}
+/* end faq part */
+
+/* feature part */
+.feature-figure-holder{
+    background: transparent!important;
+    min-height: auto!important;
+    text-align: center;
+}
+/* end feature part */
+@media only screen and (max-width: 1251px) {
+    .team-container{
+        padding: 60px 100px;
+    
+    }
+    .faq-container > div{
+        padding: 0px 50px;
+    }
+}
+@media only screen and (max-width: 1051px) {
+    .team-container{
+        padding: 60px 40px;
+    
+    }
+    .faq-container > div{
+        padding: 0px 20px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .headline-image {
+        padding-bottom: 220px;
+        background-position: center 300px;
+        background-size: 330px auto;
+    }
+    .faq-title{
+        color: #001746;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    /* .category-toggle{
+        display: none;
+    } */
+}
+@media only screen and (max-width: 450px) {
+    .headline-image {
+        padding-bottom: 150px;
+        background-position: center 370px;
+        background-size: 250px auto;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .team-container > .justify-content-center > .mobile-container {
+        display: block;
+    }
+    .team-container > .justify-content-center > .desktop-container {
+        display: none;
+    }
+    .team-container{
+        padding: 60px 20px;
+    
+    }
+}
